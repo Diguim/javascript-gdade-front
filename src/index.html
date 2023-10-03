@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <h1>GESTOR DE APLICAÇÕES DE EMPREGO</h1>
+    </header>
+    <main class="container-main">
+        <section class="form-section">
+            <div class="box-cadastro">
+
+                <h2>CADASTRO</h2>
+                <form id="form-register" onsubmit=register()>
+                    <div class="form-cadastro">
+                        <div class="item-form">
+                            <label for="name-job">Nome da vaga:</label>
+                            <input type="text" name="name-job" id="name-job" />
+                        </div>
+                        <div class="item-form">
+                            <label for="desc-job">Descrição da vaga:</label>
+                            <textarea type="" name="desc-job" id="desc-job"></textarea>
+                        </div>
+                        <div class="item-form">
+                            <label for="empresa-job">Empresa da vaga:</label>
+                            <input type="text" name="empresa-job" id="empresa-job" />
+                        </div>
+                        <div class="item-form">
+                            <label for="link-job">Link da empresa:</label>
+                            <input type="url" name="link-job" id="link-job" />
+                        </div>
+                        <div class="item-form">
+                            <label for="emp-anun-job">Empresa de anúncio da vaga:</label>
+                            <input type="text" name="emp-anun-job" id="emp-anun-job" />
+                        </div>
+                        <div class="item-form">
+                            <label for="link-anun-job">Link do anúncio da vaga:</label>
+                            <input type="url" name="link-anun-job" id="link-anun-job" />
+                        </div>
+                        <div class="buttons">
+                            <button type="submit" class="btn-default" id="add-button">
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="show-section">
+            <div class="header-show-section">
+                <div class="buttons">
+                    <button class="btn-default" id="att-button">Atualizar</button>
+                </div>
+                <form action="">
+                    <div class="search-area-show">
+                        <div class="item-form-search">
+                            <label for="select-search">Buscar por:</label>
+                            <select name="select-search" id="select-search">
+                                <option value="nomeDaVaga" selected>Nome</option>
+                                <option value="empresaDaVaga">Empresa</option>
+                                <option value="empresaAnunciante">Empresa anunciante</option>
+                            </select>
+                        </div>
+                        <div class="item-form-search">
+                            <input type="text" name="search-input" id="search-input" placeholder="Pesquisar" />
+                        </div>
+                        <div class="buttons">
+                            <button type="submit" class="btn-default" id="search-button">
+                                Buscar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="content-show-section">
+                <div class="content-cards-jobs">
+                    <h3>Desenvolvedor Front-end Jr.</h3>
+                    <p>Ghosts Tech</p>
+                    <p>Link da empresa</p>
+                    <p>Solides/Gupy</p>
+                    <p>link do anuncio</p>
+                    <p>dia</p>
+                    <p>hora</p>
+                </div>
+                <div class="content-cards-jobs">
+                    <h3>Desenvolvedor Front-end Jr.</h3>
+                    <p>Ghosts Tech</p>
+                    <p>Link da empresa</p>
+                    <p>Solides/Gupy</p>
+                    <p>link do anuncio</p>
+                    <p>dia</p>
+                    <p>hora</p>
+                </div>
+                <div class="content-cards-jobs">
+                    <h3>Desenvolvedor Front-end Jr.</h3>
+                    <p>Ghosts Tech</p>
+                    <p>Link da empresa</p>
+                    <p>Solides/Gupy</p>
+                    <p>link do anuncio</p>
+                    <p>dia</p>
+                    <p>hora</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <p>Diogo Otoni Santos</p>
+            <p>INDIGUINATION</p>
+        </section>
+    </footer>
+
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+/*
+        PARTE ESTRUTURAL PRINCIPAL
+*/
+
+.container-main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.form-section{
+    flex-grow: 4;
+
+    padding-left: 1rem;
+}
+.show-section{
+    flex-grow: 6;
+    
+}
+
+/**
+        PARTE DO FORMULÁRIO
+*/
+.box-cadastro{
+    text-align: center;
+    border-radius: 2rem;
+    box-shadow: 5px 5px 20px #76aaef,
+        -5px -5px 20px #5F5F5F;
+    padding: 1rem;
+    margin: .7rem;
+}
+
+.item-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: .5rem 0;
+}
+
+.item-form > input,
+#search-input {
+    width: 100%;
+    padding: .2rem .4rem;
+}
+
+textarea{
+    width: 100%;
+    resize: none;
+    height: 200px;
+    padding: .5rem 0 0 .5rem;
+}
+
+#att-button{
+    font-size: 30px;
+    background-color: #FF0000;
+}
+#att-button:hover{
+    background-color: #FEFEFE;
+    border: 1px solid #FF0000;
+    color: #FF0000;
+}
+/**
+        PARTE DO CABEÇALHO DA PARTE DE MOSTRAR
+        CONTEM BOTAO DE ATUALIZAR E BUSCA
+*/
+.header-show-section{
+    display: flex;
+    flex-direction:  column;
+    align-items: center;
+}
+
+.search-area-show{
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    flex-wrap: wrap;
+}
+.item-form-search{
+    margin: .3rem;
+}
+
+/**
+        PARTE "PRINCIPAL"
+        CONTEM OS CARDS DAS APLICAÇÕES
+*/
+.content-show-section{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 1rem;
+}
+
+.content-cards-jobs{
+    box-shadow: 5px 5px 20px #76aaef,
+        -5px -5px 20px #5F5F5F;
+
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: .3rem;
+}
+
+
+
+
+
+
+footer{
+    text-align: center;
+}

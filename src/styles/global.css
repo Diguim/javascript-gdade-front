@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Dosis', sans-serif;
+}
+
+
+
+
+header {
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+}
+
+.btn-default{
+    background-color: #1A73E8;
+    border: 1px solid #FEFEFE;
+    border-radius: 1rem;
+    color: #FEFEFE;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    padding: .5rem 1rem;
+    margin: 0.275rem;
+}
+.btn-default:hover{
+    background-color: #FEFEFE;
+    border: 1px solid #1A73E8;
+    color: #1A73E8;
+}
