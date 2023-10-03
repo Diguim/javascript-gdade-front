@@ -24,7 +24,7 @@
             <div class="box-cadastro">
 
                 <h2>CADASTRO</h2>
-                <form id="form-register" onsubmit=register()>
+                <form id="form-register" autocomplete="off">
                     <div class="form-cadastro">
                         <div class="item-form">
                             <label for="name-job">Nome da vaga:</label>
@@ -64,14 +64,15 @@
                 <div class="buttons">
                     <button class="btn-default" id="att-button">Atualizar</button>
                 </div>
-                <form action="">
+                <form>
                     <div class="search-area-show">
                         <div class="item-form-search">
                             <label for="select-search">Buscar por:</label>
                             <select name="select-search" id="select-search">
-                                <option value="nomeDaVaga" selected>Nome</option>
-                                <option value="empresaDaVaga">Empresa</option>
-                                <option value="empresaAnunciante">Empresa anunciante</option>
+                                <option value="jobName" selected>Nome</option>
+                                <option value="descricao">Descricao</option>
+                                <option value="empresa">Empresa</option>
+                                <option value="empAnun">Empresa anunciante</option>
                             </select>
                         </div>
                         <div class="item-form-search">
@@ -86,7 +87,7 @@
                 </form>
             </div>
             <div class="content-show-section" id="content-show-section">
-                <div class="content-cards-jobs">
+                <!-- <div class="content-cards-jobs">
                     <h3>Desenvolvedor Front-end Jr.</h3>
                     <p>Ghosts Tech</p>
                     <p>Link da empresa</p>
@@ -94,7 +95,7 @@
                     <p>link do anuncio</p>
                     <p>dia</p>
                     <p>hora</p>
-                </div>
+                </div> -->
                 
             </div>
         </section>
