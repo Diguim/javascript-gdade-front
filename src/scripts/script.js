@@ -2,6 +2,7 @@ const addButton = document.getElementById("add-button");
 const searchButton = document.getElementById("search-button");
 const attButton = document.getElementById("att-button");
 
+
 /**
  * Envia para o back-end o JSON do formulário contidos no parametro
  * @param {*} values 
@@ -29,9 +30,9 @@ addButton.addEventListener("click", (e) => {
     const linkAnunJob = document.querySelector("#link-anun-job").value;
     const dataEHora = new Date();
 
-    
-    
+   
     const valores = {
+        
         jobName: nameJob,
         descricao: descJob,
         empresa: empresaJob,
@@ -43,6 +44,7 @@ addButton.addEventListener("click", (e) => {
     };
     
     register(valores);
+   
     
     document.getElementById("form-register").reset();
 });
@@ -57,8 +59,12 @@ function putInHtml(dados) {
     console.log(dados);
     let newHtml = "";
     for(let i = 0; i < dados.length; i++){
-        newHtml += `
-        <div class="content-cards-jobs">
+
+        if(dados[i].id_job != 1){
+
+            newHtml += `
+            <div class="content-cards-jobs">
+            <p class="id-destaque"> <span>#${dados[i].id_job}</span> </p>
             <h3>${dados[i].jobName}</h3>
             <p><span class="span-destaque">Descrição:</span> ${dados[i].descricao}</p>
             <p> <span class="span-destaque">Empresa:</span> ${dados[i].empresa}</p>
@@ -67,9 +73,13 @@ function putInHtml(dados) {
             <p> <span class="span-destaque"><a href="${dados[i].linkAnun}" target="_blank">Link do anúncio</a></span></p>
             <p> <span class="span-destaque">${dados[i].data}</span></p>
             <p> <span class="span-destaque">${dados[i].hora}</span></p>
-        </div>`;
+            </div>`;
+        }
     }
     contentShowSection.innerHTML = newHtml;
+
+
+    //fazer um map ou mesmo um foreach tirando o dados.id_job != 1
 }
 
 /**
@@ -91,7 +101,6 @@ attButton.addEventListener("click", () => {
 });
 
 
-
 function searchItems(typeSearch, dataSearch){
 
     fetch('http://localhost:8080/api/searchjobs?' + new URLSearchParams({ 
@@ -106,10 +115,6 @@ function searchItems(typeSearch, dataSearch){
 
 searchButton.addEventListener("click", (e) => {
     e.preventDefault();
-
-    //envia via fetch com body do tipo e do elemento
-    //recebe GET a partir do que foi buscado
-    //no backend é uma rota especifica para busca
 
     const selectSearch = document.getElementById("select-search").value;
     const searchInput = document.getElementById("search-input").value;

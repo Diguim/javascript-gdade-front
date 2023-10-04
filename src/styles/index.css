@@ -106,11 +106,15 @@ textarea{
     max-width: 440px;
 }
 
+.id-destaque{
+    font-weight: bold;
+    color: #5F5F5F;
+    text-align: left;
+}
 
 .span-destaque{
     font-weight: bold;
 }
-
 
 
 footer{
