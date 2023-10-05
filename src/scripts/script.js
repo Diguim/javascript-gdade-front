@@ -40,7 +40,12 @@ addButton.addEventListener("click", (e) => {
         empAnun: empAnunJob,
         linkAnun: linkAnunJob,
         data: dataEHora.toLocaleDateString(),
-        hora: dataEHora.toLocaleTimeString()
+        hora: dataEHora.toLocaleTimeString(),
+
+        activeStatus: true,
+        statusDescription: ["Send"],
+        lastUpdatedDay: dataEHora.toLocaleDateString(),
+        lastUpdatedTime: dataEHora.toLocaleTimeString(),
     };
     
     register(valores);
